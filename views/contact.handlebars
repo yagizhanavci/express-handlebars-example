@@ -1,0 +1,15 @@
+<h1>Contacts Page</h1>
+
+{{#with user}}
+  <p>I am {{name}} and {{age}} years old. My phone number is {{phone}}</p>
+{{/with}}
+
+<ul>
+  {{#each list as |listItem index|}}
+    <li>
+      {{#each listItem.items as |item itemIndex|}}
+        <span>{{item}}</span>
+      {{/each}}
+    </li>
+  {{/each}}
+</ul>
